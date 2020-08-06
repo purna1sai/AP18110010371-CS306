@@ -49,12 +49,10 @@ state=1;
 else
 {
 printf("Invalid token");
-
 exit(0);
 }
 break;
-}
-}
+}}
 if(state==0)
 printf("\n\nString accepted\n\n");
 else
