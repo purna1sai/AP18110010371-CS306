@@ -1,6 +1,5 @@
 """
-Question :
-Implementation of Language recognizer for set of all strings ending with two symbols of
+Question : Implementation of Language recognizer for set of all strings ending with two symbols of
 same type.
 """
 
