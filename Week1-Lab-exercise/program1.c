@@ -2,8 +2,9 @@
 Question : Implementation of Language recognizer for set of all strings over input alphabet ∑={a,b}
 containing even number of a’s and even number of b’s.
 */
-//Program done in C
+
 #include<stdio.h>
+#include<stdlib.h>
 void main(){
 int state=0,i=0;
 char current,input[20];
