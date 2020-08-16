@@ -11,7 +11,7 @@ st=input("Enter the string to be checked : ")
 if st[-1]==st[-2] :
     print("String Accepted")
 else :
-    print("String Declined")
+    print("String Invalid")
 """
 
 #Program using DFA:
@@ -24,4 +24,4 @@ for i in range(len(st)):
 if state==1 :
     print("String Accepted")
 else :
-    print("String Declined")
+    print("String Invalid")
