@@ -2,7 +2,9 @@
 Question : Implementation of Language recognizer for set of all strings over input alphabet ∑={a,b}
 containing even number of a’s and even number of b’s.
 """
+
 #Taking the characters to be recognized as 'a' and 'b'.
+
 inp = input("Enter Input String : ")
 state_a = 0 
 state_b = 0
