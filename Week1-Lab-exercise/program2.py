@@ -3,7 +3,6 @@ Question : Implementation of Language recognizer for set of all strings ending w
 same type.
 """
 
-
 """
 Simple Program:
 
