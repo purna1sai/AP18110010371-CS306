@@ -12,12 +12,18 @@ if(strcmp(s,keyword[i])==0)
 return 1;
 return 0;
 }
-/*write a function to store identifier in symbol table
+
 void store_symb_tab(char id[], char symb_tab[][20])
 {
-Check whether the id is already available in the symbol table, if available, ignore. otherwise add it.
+int i;
+for(i=0; strcmp(symb_tab[i],"")&&i<20;++i)
+if(!strcmp(symb_tab[i],id))
+return;
+if(i==20){
+printf("Overflow!"); return;}
+strcpy(symb_tab[i],id);
 }
-*/
+
 int main()
 {
 FILE *fp1,*fp2;
@@ -53,9 +59,11 @@ else{
 id[i]='\0';
 if(check_keyword(id))
 fprintf(fp2," \n %s : keyword ",id);
-else
+else{
 fprintf(fp2,"\n %s : identifier",id);
 // call a function which stores id in symbol table
+store_symb_tab(id,symb_tab);
+}
 state=0;
 i=0;
 ungetc(c,fp1);
@@ -75,20 +83,38 @@ ungetc(c,fp1);
 }
 break;
 case 5:if(c=='='){
-fprintf(fp2,"\n relational operator ");
 //write code to print specific operator like <= or >=
+fseek(fp1,-2,SEEK_CUR); //go back 2 chars
+c=fgetc(fp1); // read '<' or '>' again
+if(c=='<')
+fprintf(fp2,"\n<=: relational operator LE");
+else
+fprintf(fp2,"\n<=: relational operator GE");
+c=fgetc(fp1); // read '=' again
 state=0;
 }
 else{
-fprintf(fp2,"\n relational operator ");
 //write code to print specific operator like <, >, <= or >=
+fseek(fp1,-2,SEEK_CUR); //go back 2 chars
+c=fgetc(fp1); // read '<' or '>' again
+if(c=='<')
+fprintf(fp2,"\n<: relational operator LT");
+else
+fprintf(fp2,"\n>: relational operator GT");
+c=fgetc(fp1) // read '=' again
 state=0;
-ungetc(c,fp1);
 }
 break;
 case 8:if(c=='='){
 fprintf(fp2,"\n relational operator ");
 //write code to print specific operator like == or !=
+fseek(fp1,-2,SEEK_CUR); //go back 2 chars
+c=fgetc(fp1); // read '!' or '=' again
+if(c=='=')
+fprintf(fp2,"\n==: relational operator EQ");
+else
+fprintf(fp2,"\n!=: relational operator NE");
+c=fgetc(fp1); // read '=' again
 state=0;
 }
 else{
