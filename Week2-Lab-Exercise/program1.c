@@ -1,3 +1,13 @@
+/*
+Question:Implement lexical analyser using C for recognizing the following tokens:
+• 24 keywords (given in the following program)
+• Identifiers with the regular expression : letter(letter | digit)*
+• Integers with the regular expression: digit+
+• Relational operators: <, >, <=, >=, ==, !=
+• Ignores everything between multi line comments (/ *...* /)
+• Storing identifiers in symbol table
+*/
+
 #include<stdio.h>
 #include<ctype.h>
 #include<string.h>
