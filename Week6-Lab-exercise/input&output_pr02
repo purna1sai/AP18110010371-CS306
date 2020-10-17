@@ -1,0 +1,49 @@
+Enter the string:
+(a,(a,a))
+Input	Action
+--------------------------------
+(a,(a,a))	S->(L) 
+a,(a,a))	L->SL' 
+,(a,a))	S->a 
+,(a,a))	L'->,SL' 
+(a,a))	S->(L) 
+a,a))	L->SL' 
+,a))	S->a 
+,a))	L'->,SL' 
+))	S->a 
+))	L'->? 
+)	L'->? 
+
+--------------------------------
+
+ String is successfully parsed
+ 
+Enter the string:
+(a,((a,a),(a,a)))
+Input	Action
+--------------------------------
+(a,((a,a),(a,a)))	S->(L) 
+a,((a,a),(a,a)))	L->SL' 
+,((a,a),(a,a)))	S->a 
+,((a,a),(a,a)))	L'->,SL' 
+((a,a),(a,a)))	S->(L) 
+(a,a),(a,a)))	L->SL' 
+(a,a),(a,a)))	S->(L) 
+a,a),(a,a)))	L->SL' 
+,a),(a,a)))	S->a 
+,a),(a,a)))	L'->,SL' 
+),(a,a)))	S->a 
+),(a,a)))	L'->? 
+,(a,a)))	L'->,SL' 
+(a,a)))	S->(L) 
+a,a)))	L->SL' 
+,a)))	S->a 
+,a)))	L'->,SL' 
+)))	S->a 
+)))	L'->? 
+))	L'->? 
+)	L'->? 
+
+--------------------------------
+
+ String is successfully parsed
