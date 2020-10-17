@@ -1,0 +1,118 @@
+Enter the string:
+i+i*i
+
+Input	Action
+--------------------------------
+i+i*i	E->TE' 
+i+i*i	T->FT' 
++i*i	F->id 
++i*i	T'->^ 
++i*i	E'->+TE' 
+i*i	T->FT' 
+*i	F->id 
+*i	T'->*FT' 
+	F->id 
+	T'->^ 
+	E'->^ 
+
+--------------------------------
+
+ String is successfully parsed
+ 
+Enter the string:
+i+i
+
+
+Input	Action
+--------------------------------
+i+i	E->TE' 
+i+i	T->FT' 
++i	F->id 
++i	T'->^ 
++i	E'->+TE' 
+i	T->FT' 
+	F->id 
+	T'->^ 
+	E'->^ 
+
+--------------------------------
+
+ String is successfully parsed
+
+Enter the string:
+i*i
+
+
+Input	Action
+--------------------------------
+i*i	E->TE' 
+i*i	T->FT' 
+*i	F->id 
+*i	T'->*FT' 
+	F->id 
+	T'->^ 
+	E'->^ 
+
+--------------------------------
+
+ String is successfully parsed
+
+Enter the string:
+i*i+i*i+i
+Input	Action
+--------------------------------
+i*i+i*i+i	E->TE' 
+i*i+i*i+i	T->FT' 
+*i+i*i+i	F->id 
+*i+i*i+i	T'->*FT' 
++i*i+i	F->id 
++i*i+i	T'->^ 
++i*i+i	E'->+TE' 
+i*i+i	T->FT' 
+*i+i	F->id 
+*i+i	T'->*FT' 
++i	F->id 
++i	T'->^ 
++i	E'->+TE' 
+i	T->FT' 
+	F->id 
+	T'->^ 
+	E'->^ 
+
+--------------------------------
+
+ String is successfully parsed
+ 
+ Enter the string:
+i+*+i
+
+
+Input	Action
+--------------------------------
+i+*+i	E->TE' 
+i+*+i	T->FT' 
++*+i	F->id 
++*+i	T'->^ 
++*+i	E'->+TE' 
+*+i	T->FT' 
+
+--------------------------------
+Error in parsing String
+
+Enter the string:
+i+i*
+
+
+Input	Action
+--------------------------------
+i+i*	E->TE' 
+i+i*	T->FT' 
++i*	F->id 
++i*	T'->^ 
++i*	E'->+TE' 
+i*	T->FT' 
+*	F->id 
+*	T'->*FT' 
+
+--------------------------------
+Error in parsing String
